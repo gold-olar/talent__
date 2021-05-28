@@ -8,11 +8,15 @@ import "./filtersection.styles.scss";
 export interface FilterSectionProps {
   selectedShapes: string[];
   selectedColors: string[];
+  handleColorSelection: (action: string, color: string) => void;
+  handleShapeSelection: (action: string, color: string) => void;
 }
 
 const FilterSection: React.FC<FilterSectionProps> = ({
   selectedShapes,
   selectedColors,
+  handleColorSelection,
+  handleShapeSelection,
 }) => {
   return (
     <>
@@ -27,6 +31,7 @@ const FilterSection: React.FC<FilterSectionProps> = ({
                 selected={selectedShapes.includes(shape) ? true : false}
                 shape={shape}
                 key={shape}
+                handleShapeSelection={handleShapeSelection}
               />
             ))}
           </div>
@@ -40,6 +45,7 @@ const FilterSection: React.FC<FilterSectionProps> = ({
                 selected={selectedColors.includes(color) ? true : false}
                 color={color}
                 key={color}
+                handleColorSelection={handleColorSelection}
               />
             ))}
           </div>

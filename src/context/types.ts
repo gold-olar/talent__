@@ -27,6 +27,11 @@ export type DataContextStateType = {
     filteredData: Data[] | [];
     selectedShapes: string[];
     selectedColors: string[];
+    dataSectionTitle: string;
   };
   loadData: () => void;
+  handleColorSelection: (action: string, color: string) => void;
+  handleShapeSelection: (action: string, color: string) => void;
+  handleDataFilter: () => void;
+  handleSectiontitle: () => void;
 };

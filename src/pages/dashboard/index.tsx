@@ -14,20 +14,39 @@ const Dashboard: React.FC<DashboardProps> = () => {
   } = React.useContext(AuthContext);
 
   const {
-    state: { selectedShapes, selectedColors, filteredData },
+    state: { selectedShapes, selectedColors, filteredData, dataSectionTitle },
     loadData,
+    handleColorSelection,
+    handleShapeSelection,
+    handleDataFilter,
+    handleSectiontitle,
   } = React.useContext(DataContext);
 
   React.useEffect(() => requireAuth(), [requireAuth, user]);
-  React.useEffect(() => loadData(), []);
+  React.useEffect(
+    () => loadData(),
+    // eslint-disable-next-line
+    []
+  );
+
+  React.useEffect(() => {
+    handleDataFilter();
+    handleSectiontitle();
+    // eslint-disable-next-line
+  }, [selectedShapes, selectedColors]);
 
   return (
     <>
       <FilterSection
         selectedShapes={selectedShapes}
         selectedColors={selectedColors}
+        handleColorSelection={handleColorSelection}
+        handleShapeSelection={handleShapeSelection}
       />
-      <DataSection filteredData={filteredData} />
+      <DataSection
+        dataSectionTitle={dataSectionTitle}
+        filteredData={filteredData}
+      />
     </>
   );
 };
