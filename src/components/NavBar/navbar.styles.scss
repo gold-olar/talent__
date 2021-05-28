@@ -1,0 +1,28 @@
+@import "../../styles/global.scss";
+
+.navbar {
+  background: $white;
+  padding: 1rem 3rem;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  display: flex;
+  justify-content: space-between;
+
+  &__logobox {
+    span {
+      font-weight: 700;
+      font-size: 1.4rem;
+      letter-spacing: 1px;
+    }
+  }
+  &__navitembox {
+    cursor: pointer;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    font-weight: 400;
+    color: $nav-red;
+    span {
+      padding-right: 10px;
+    }
+  }
+}
