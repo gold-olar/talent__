@@ -1,0 +1,22 @@
+[
+  { "id": 0, "color": "yellow", "shape": "triangle" },
+  { "id": 1, "color": "blue", "shape": "square" },
+  { "id": 2, "color": "red", "shape": "oval" },
+  { "id": 3, "color": "red", "shape": "round" },
+  { "id": 4, "color": "yellow", "shape": "triangle" },
+  { "id": 5, "color": "blue", "shape": "square" },
+  { "id": 6, "color": "blue", "shape": "square" },
+  { "id": 7, "color": "green", "shape": "rectangle" },
+  { "id": 8, "color": "skyblue", "shape": "round" },
+  { "id": 9, "color": "green", "shape": "oval" },
+  { "id": 10, "color": "yellow", "shape": "triangle" },
+  { "id": 11, "color": "blue", "shape": "square" },
+  { "id": 12, "color": "grey", "shape": "rectangle" },
+  { "id": 13, "color": "grey", "shape": "rectangle" },
+  { "id": 14, "color": "blue", "shape": "triangle" },
+  { "id": 15, "color": "grey", "shape": "square" },
+  { "id": 16, "color": "grey", "shape": "round" },
+  { "id": 17, "color": "blue", "shape": "square" },
+  { "id": 18, "color": "grey", "shape": "rectangle" },
+  { "id": 19, "color": "red", "shape": "rectangle" }
+]
