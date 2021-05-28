@@ -1,6 +1,6 @@
 .data-section {
   margin-top: 2rem;
-  padding: 1rem;
+  padding: 1rem 3rem;
 
   h3 {
     margin-bottom: 3rem;
@@ -9,5 +9,14 @@
   &__list {
     display: flex;
     flex-wrap: wrap;
+  }
+}
+
+@media only screen and (max-width: 868px) {
+  .data-section {
+    padding: 1rem;
+    &__list {
+      margin: auto;
+    }
   }
 }

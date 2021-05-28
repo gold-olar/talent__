@@ -1,5 +1,6 @@
 import * as React from "react";
 import DataSection from "../../components/DataSection/index";
+import FilterSection from "../../components/FilterSection";
 
 import { AuthContext } from "../../context/AuthContext";
 import { DataContext } from "../../context/DataContext";
@@ -22,6 +23,10 @@ const Dashboard: React.FC<DashboardProps> = () => {
 
   return (
     <>
+      <FilterSection
+        selectedShapes={selectedShapes}
+        selectedColors={selectedColors}
+      />
       <DataSection filteredData={filteredData} />
     </>
   );

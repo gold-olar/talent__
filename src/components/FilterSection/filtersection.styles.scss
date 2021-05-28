@@ -1,0 +1,35 @@
+.filter-section {
+  padding: 2rem 3rem;
+
+  h3 {
+    margin-bottom: 2rem;
+  }
+  &__shapes-box {
+    h5 {
+      color: skyblue;
+      margin-bottom: 1rem;
+    }
+    &-shapes {
+      display: flex;
+      flex-wrap: wrap;
+    }
+  }
+
+  &__colors-box {
+    margin-top: 1rem;
+    h5 {
+      color: skyblue;
+      margin-bottom: 1rem;
+    }
+    &-colors {
+      display: flex;
+      flex-wrap: wrap;
+    }
+  }
+}
+
+@media only screen and (max-width: 868px) {
+  .filter-section {
+    padding: 1rem;
+  }
+}

@@ -16,8 +16,6 @@ const SingleData: React.FC<SingleDataProps> = ({ data }) => {
 
   return (
     <div className="data-box">
-      {data.shape}
-      {data.color}
       <div className={`data-box__${data.shape}`} style={specialstyle}></div>
     </div>
   );

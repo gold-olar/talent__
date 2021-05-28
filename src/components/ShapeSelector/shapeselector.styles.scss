@@ -1,0 +1,26 @@
+.shape-selector {
+  padding: 3px 20px;
+  margin-right: 1%;
+  border-radius: 10px 20px;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  cursor: pointer;
+  text-transform: capitalize;
+  border: 1px solid transparent;
+  transition: all 0.5s;
+
+  &:hover {
+    background: darken(#fff, 10%);
+  }
+
+  &__selected {
+    border: 1px solid skyblue;
+    background: darken(#fff, 30%);
+    // color: #fff;
+  }
+}
+
+@media only screen and (max-width: 868px) {
+  .shape-selector {
+    margin-bottom: 5px;
+  }
+}
