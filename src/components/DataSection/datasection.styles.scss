@@ -1,0 +1,13 @@
+.data-section {
+  margin-top: 2rem;
+  padding: 1rem;
+
+  h3 {
+    margin-bottom: 3rem;
+  }
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}

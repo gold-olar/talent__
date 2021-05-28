@@ -1,6 +1,8 @@
 const path = require("path");
-const { shapes, colors } = require("./constants");
 const fs = require("fs");
+
+const colors = ["red", "blue", "green", "yellow", "skyblue", "grey"];
+const shapes = ["oval", "round", "triangle", "rectangle", "square"];
 
 const data = [];
 
