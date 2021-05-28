@@ -23,7 +23,11 @@ const Navbar: React.FC<NavbarProps> = () => {
           className="navbar__navitembox"
         >
           <span> {!user ? "Login" : "Logout"} </span>
-          <img src={!user ? loginIcon : logOutIcon} width="25px" />
+          <img
+            alt="Authentication sign"
+            src={!user ? loginIcon : logOutIcon}
+            width="25px"
+          />
         </div>
       </div>
     </>
