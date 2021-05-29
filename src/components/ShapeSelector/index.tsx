@@ -16,7 +16,7 @@ const ShapeSelector: React.FC<ShapeSelectorProps> = ({
   return (
     <div
       onClick={() => handleShapeSelection(selected ? "REMOVE" : "ADD", shape)}
-      className={`shape-selector ${selected && "shape-selector__selected"} `}
+      className={`shape-selector ${selected ? "shape-selector__selected" : ""}`}
     >
       {shape}
     </div>

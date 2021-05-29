@@ -16,7 +16,9 @@ const ColorSelector: React.FC<ColorSelectorProps> = ({
   return (
     <div
       onClick={() => handleColorSelection(selected ? "REMOVE" : "ADD", color)}
-      className={`color-selector ${selected && "color-selector__selected"} `}
+      className={`color-selector ${
+        selected ? "color-selector__selected" : ""
+      } `}
       style={{
         backgroundColor: color,
       }}
