@@ -43,6 +43,7 @@ const Dashboard: React.FC<DashboardProps> = () => {
         handleColorSelection={handleColorSelection}
         handleShapeSelection={handleShapeSelection}
       />
+
       <DataSection
         dataSectionTitle={dataSectionTitle}
         filteredData={filteredData}

@@ -3,7 +3,8 @@ export type Color = "red" | "blue" | "green" | "yellow" | "skyblue" | "grey";
 
 export interface AuthUserObject {
   email: string;
-  token: string;
+  token?: string;
+  password: string;
 }
 
 export interface Data {
@@ -16,7 +17,7 @@ export type AuthContextState = {
   state: {
     user: AuthUserObject | null;
   };
-  login: () => void;
+  login: (loginData: AuthUserObject) => void;
   logout: () => void;
   requireAuth: () => void;
 };

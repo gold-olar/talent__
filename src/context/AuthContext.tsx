@@ -6,7 +6,7 @@ const usercontextDefaultValues: AuthContextState = {
   state: {
     user: null,
   },
-  login: () => {},
+  login: (loginData: AuthUserObject) => {},
   logout: () => {},
   requireAuth: () => {},
 };
@@ -22,11 +22,10 @@ export interface AuthProviderProps {
 const AuthProvider: React.FC<AuthProviderProps> = ({ children }) => {
   const [user, setUser] = React.useState<AuthUserObject | null>(null);
 
-  const login = () => {
+  const login = (loginData: AuthUserObject) => {
     // For now, just set user data
     setUser({
-      email: "talent@test.com",
-      token: "userEncryptedBalabalaToken",
+      ...loginData,
     });
   };
   const logout = () => {

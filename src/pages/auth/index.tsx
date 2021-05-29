@@ -1,5 +1,8 @@
 import * as React from "react";
+import AuthForm from "../../components/AuthForm";
 import { AuthContext } from "../../context/AuthContext";
+
+import "./auth.styles.scss";
 
 export interface AuthPageProps {}
 
@@ -13,7 +16,13 @@ const AuthPage: React.FC<AuthPageProps> = () => {
     requireAuth();
   }, [requireAuth, user]);
 
-  return <>Render Auth Form here with hardcoded data</>;
+  return (
+    <>
+      <div className="auth-page">
+        <AuthForm />
+      </div>
+    </>
+  );
 };
 
 export default AuthPage;

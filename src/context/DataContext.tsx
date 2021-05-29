@@ -27,6 +27,7 @@ const DataProvider: React.FC<DataProviderProps> = ({ children }) => {
 
   //   User Reducer hook  here instead !
   const [data, setData] = React.useState<Data[]>(state.data);
+
   const [filteredData, setFilteredData] = React.useState<Data[]>(
     state.filteredData
   );
@@ -43,7 +44,7 @@ const DataProvider: React.FC<DataProviderProps> = ({ children }) => {
   const loadData = () => {
     if (data.length === 0) {
       setData(rawData as Data[]);
-      return setFilteredData(rawData as Data[]);
+      setFilteredData(rawData as Data[]);
     }
   };
 
@@ -72,13 +73,14 @@ const DataProvider: React.FC<DataProviderProps> = ({ children }) => {
     );
   };
 
-  const handleDataFilter = () => {
-    const filteredByShapes = data.filter((datum) =>
+  const handleDataFilter = async () => {
+    const filteredByShapes = await data.filter((datum) =>
       selectedShapes.includes(datum.shape)
     );
-    const filteredByBoth = filteredByShapes.filter((datum) =>
+    const filteredByBoth = await filteredByShapes.filter((datum) =>
       selectedColors.includes(datum.color)
     );
+
     setFilteredData(filteredByBoth);
   };
 
